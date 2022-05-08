@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Simple Notes</title>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">DAVV</div>
+        <ul class="nav">
+          <li><a href="to_do.html" target="_blank">To do list</a></li>
+          <li><a href="#""> Simple Notes</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="header">
+      <div class="container">
+        <div>
+          <h2>Welcome to your own Notes.</h2>
+          <p>7 Key Benefits of Effective Note-taking:</p>
+          <ol>
+            <li>Improves focus and attention to detail</li>
+            <li>Promotes active learning</li>
+            <li>Boosts comprehension and retention</li>
+            <li>Highlight important material and discard unnecessary content</li>
+            <li>Extends attention span</li>
+            <li>Improves organization skills</li>
+            <li>Boost creativity</li>
+          </ol>
+          <div class="author">
+            <img src="linkedin-img.png" alt="LinkedIn" class="box">
+            <p class="box">Article from</p>
+          </div>
+        </div>
+        <img src="notes-img.png" alt="" />
+      </div>
+    </header>
+
+    <section class="boxes">
+      <div class="big-container">
+        <div class="left-container">
+          <div class="box">
+            <p>Date:</p><input type="date" class="date item" id="date"/>
+          </div>
+    
+          <div class="box">
+            <p>Title:</p><input type="text" class="title item" id="title" />
+          </div>
+    
+          <div class="box">
+            <P>Notes:</P>
+            <textarea
+            class="content item"
+            id="content"
+            required
+            placeholder="Descibe your task"
+            oninput='this.style.height="";this.style.height=this.scrollHeight + 3 + "px"'
+            ></textarea>
+              <button class="create btn item" id="submit">Submit</button>
+          </div>
+        </div>
+
+        
+        <div class="right-container">
+          <div class="list box list-box">
+            <div class="notes-container">
+              <button class="show-notes">Show notes 1</button>
+              <button class="show-notes">Show notes 2</button>
+            </div>
+        </div>
+
+      </div>
+    </section>  
+
+    <div class="hidden-container">
+      <div class="notes hidden" id="notes">
+        <button class="close-notes">x</button>
+        <p class="date">Date created: 2022-05-08</p>
+        <h1>I'm a example notes 📝</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum.
+        </p>
+          <div class="close-btn">
+            <div>
+              <button class="btn" id="delete">Delete</button>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="overlay hidden"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
